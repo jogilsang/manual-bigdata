@@ -24,6 +24,8 @@ for me
       JAVA_HOME  C:\Progra~1\java\jdk1.8.0_144 (중간에 경로 띄어쓰기 있으면 에러남)
       HADOOP_HOME C:\hadoop
       JAVA_OPTIONS -Xmx512M -Xmx512M
+5. spark-shell 
+   cmd열고 c:\로 이동한뒤, spark-2.4\bin\spark-shell        
       
    
    

@@ -1,5 +1,6 @@
 # manual-bigdata
-for me
+-환경변수 백업이 가능한가?
+
 
 
 ### 윈도우 스칼라 window scala

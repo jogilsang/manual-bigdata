@@ -10,9 +10,9 @@ for me
    c:\scala 로 경로설정해서 설치하기 (중간에 경로 띄어쓰기 있으면 에러남)
    (https://www.scala-lang.org/download/)
 3. Spark
-   hadoop 2.6에 맞춰서 download
+   1. hadoop 2.6에 맞춰서 download
    (http://spark.apache.org/downloads.html)
-   c:\spark-2.4 (중간에 경로 띄어쓰기 있으면 에러남)
+   2. c:\spark-2.4 (중간에 경로 띄어쓰기 있으면 에러남)
 4. winUtils
    1. visit (https://github.com/steveloughran/winutils)
    2. git clone https://github.com/steveloughran/winutils.git

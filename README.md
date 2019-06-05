@@ -27,6 +27,9 @@
       JAVA_OPTIONS -Xmx512M -Xmx512M
 5. spark-shell 
    cmd열고 c:\로 이동한뒤, spark-2.4\bin\spark-shell        
+// 출처 : https://jjangjjong.tistory.com/24   
+   
+   
       
    
    

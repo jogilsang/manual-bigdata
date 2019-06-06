@@ -49,3 +49,7 @@ HelloWorld.main(null)
 ```
 https://www.programcreek.com/scala/org.apache.spark.sql.expressions.Window
 ```
+### 스칼라 튜토리얼
+```
+https://www.scala-exercises.org/scala_tutorial/terms_and_types
+```

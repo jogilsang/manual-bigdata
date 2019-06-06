@@ -25,6 +25,10 @@
       JAVA_HOME  C:\Progra~1\java\jdk1.8.0_144 (중간에 경로 띄어쓰기 있으면 에러남)
       HADOOP_HOME C:\hadoop
       JAVA_OPTIONS -Xmx512M -Xmx512M
+      (에러 발생시)
+      SPARK_HOME, SCALA_HOME 경로에 bin을 제거
+      Path에 등록된 java 경로도 위의 JAVA_HOME과 유사하게한뒤 bin 추가하기
+      
 5. spark-shell 
    cmd열고 c:\로 이동한뒤, spark-2.4\bin\spark-shell        
 // 출처 : https://jjangjjong.tistory.com/24   

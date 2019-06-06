@@ -3,7 +3,7 @@
 
 
 
-### 윈도우 스칼라 window scala
+### 윈도우 스칼라 window scala 설치
 ```
 1. java 
    1.8 설치 및 환경변수 설정 (람다지원해야됨. 무조건 1.8이상)
@@ -31,11 +31,16 @@
       
 5. spark-shell 
    cmd열고 c:\로 이동한뒤, spark-2.4\bin\spark-shell        
-// 출처 : https://jjangjjong.tistory.com/24   
-   
-   
-      
-   
-   
-   
+// 출처 : https://jjangjjong.tistory.com/24      
+```
+
+### 스칼라 Hello World!
+```
+object HelloWorld {
+    def main(args: Array[String]) {
+        println("Hello, world!")
+    }
+}
+
+HelloWorld.main(null)
 ```

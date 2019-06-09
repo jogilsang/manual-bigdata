@@ -82,3 +82,10 @@ https://www.scala-exercises.org/scala_tutorial/terms_and_types
 https://twitter.github.io/scala_school/ko/index.html
 ```
 
+### 스칼라 에러
+Spark context available as 'sc' (master = local[*], app id = local-1560057371716).
+Spark session available as 'spark'.
+```
+spark.stop() 
+sc.stop()
+```

@@ -18,7 +18,7 @@
     HADOOP_HOME (C:\\hadoop)
     JAVA_OPTIONS (-Xmx512M -Xmx512M)
 
-실습과정
+실습과정 (WordCountScalaHDFSScript.scala는 c:\spark-2.4\bin에 집어넣는다)
     Window PowerShell 실행 (C:\\spark-2.4\\bin 경로 이동)
     .\\spark-shell -i WordCountScalaHDFSScript.scala 2>&1 | Tee-Object -file c:\\output_조길상_201103277.txt
     txt파일 UTF-8 형식 변환

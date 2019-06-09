@@ -1,9 +1,32 @@
 # manual-bigdata
 -환경변수 백업이 가능한가?
 
+### 윈도우 스파크 실습환경
+```
+실습환경
+1. OS
+    Window 10
+2. Other
+    java 1.8.0_201
+    spark-2.4.6
+    hadoop 2.6
+
+환경변수
+    SPARK_HOME (C:\\spark-2.4\\bin)
+    SCALA_HOME (C:\\scala\\bin)
+    JAVA_HOME  (C:\\Progra~1\\java\\jdk1.8.0_144)
+    HADOOP_HOME (C:\\hadoop)
+    JAVA_OPTIONS (-Xmx512M -Xmx512M)
+
+실습과정
+    Window PowerShell 실행 (C:\\spark-2.4\\bin 경로 이동)
+    .\\spark-shell -i WordCountScalaHDFSScript.scala 2>&1 | Tee-Object -file c:\\output_조길상_201103277.txt
+    txt파일 UTF-8 형식 변환
+    tree /F >> c:\\output_조길상_201103277.txt
+```
 
 
-### 윈도우 스칼라 window scala 설치
+### 윈도우 스파크, 스칼라, 자바 세팅 window spark, scala,java 설치
 ```
 1. java 
    1.8 설치 및 환경변수 설정 (람다지원해야됨. 무조건 1.8이상)

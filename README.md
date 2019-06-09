@@ -53,3 +53,9 @@ https://www.programcreek.com/scala/org.apache.spark.sql.expressions.Window
 ```
 https://www.scala-exercises.org/scala_tutorial/terms_and_types
 ```
+
+### 스칼라 스터디(한글)
+```
+https://twitter.github.io/scala_school/ko/index.html
+```
+

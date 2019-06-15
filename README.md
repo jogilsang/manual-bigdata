@@ -74,7 +74,92 @@ https://www.programcreek.com/scala/org.apache.spark.sql.expressions.Window
 ```
 ### 스칼라 튜토리얼
 ```
+url :
 https://www.scala-exercises.org/scala_tutorial/terms_and_types
+
+contents :
+
+scala> 1
+res0: Int = 1
+
+scala> true
+res1: Boolean = true
+
+scala> "hello, scala"
+res2: String = hello, scala
+
+scala> 1+2
+res3: Int = 3
+
+scala> "Hello, " + "Scala!"
+res4: String = Hello, Scala!
+
+scala> "Hello, " ++ "Scala!"
+res5: String = Hello, Scala!
+
+scala> (1+2)+3
+res6: Int = 6
+
+scala> (3*3)
+res7: Int = 9
+
+scala> "hello, scala".size
+res8: Int = 12
+
+scala> "hello, scala".toUpperCase
+res15: String = HELLO, SCALA
+
+scala> "hello, scala".toLowerCase
+res16: String = hello, scala
+
+scala> 3 + 2 == 3.+(2)
+res17: Boolean = true
+
+scala> 16.toHexString
+res20: String = 10
+
+scala> 4.toHexString
+res21: String = 4
+
+scala> (0 to 10).contains
+contains   containsSlice
+
+scala> (0 to 10).contains(10)
+res23: Boolean = true
+
+scala> (0 until 10).contains(10)
+res24: Boolean = false
+
+scala> 0 until 10
+res26: scala.collection.immutable.Range = Range(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+scala> 0 to 10
+res27: scala.collection.immutable.Range.Inclusive = Range(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+scala> "abc".drop(1)
+res31: String = bc
+
+scala> "abc".drop(2)
+res32: String = c
+
+scala> "abc".drop(3)
+res33: String = ""
+
+scala> "abc".drop(4)
+res34: String = ""
+
+scala> "abc".take(1)
+res35: String = a
+
+scala> "abc".take(2)
+res36: String = ab
+
+scala> "abc".take(3)
+res37: String = abc
+
+scala> "abc".take(4)
+res38: String = abc
+
 ```
 
 ### 스칼라 스터디(한글)

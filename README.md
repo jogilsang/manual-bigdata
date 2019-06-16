@@ -265,6 +265,48 @@ res38: Int = 24
 @tailrec ???
 ```
 
+### 스칼라 튜토리얼 6 : Structuring Information
+```
+
+case class Note(
+  name: String,
+  duration: String,
+  octave: Int
+)
+
+val c3 = Note("C", "Quarter", 3)
+
+sealed trait Symbol
+case class Note(name: String, duration: String, octave: Int) extends Symbol
+case class Rest(duration: String) extends Symbol
+
+--------------------------------------------------------------------------------
+
+scala> sealed trait Duration
+defined trait Duration
+
+scala> case object Whole extends Duration
+defined object Whole
+
+scala> case object Half extends Duration
+defined object Half
+
+scala> case object Quarter extends Duration
+defined object Quarter
+
+scala> def fractionOfWhole(duration: Duration): Double =
+     |   duration match {
+     | case Whole => 1.0
+     | case Half => 2.0
+     | case Quarter => 3.0
+     | }
+fractionOfWhole: (duration: Duration)Double
+
+scala> fractionOfWhole(Whole)
+res44: Double = 1.0
+
+```
+
 ### 스칼라 스터디(한글)
 ```
 https://twitter.github.io/scala_school/ko/index.html

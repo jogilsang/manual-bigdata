@@ -72,11 +72,14 @@ HelloWorld.main(null)
 ```
 https://www.programcreek.com/scala/org.apache.spark.sql.expressions.Window
 ```
-### 스칼라 튜토리얼
+### 스칼라 튜토리얼 사이즈
 ```
 url :
-https://www.scala-exercises.org/scala_tutorial/terms_and_types
+https://www.scala-exercises.org/scala_tutorial
+```
 
+### 스칼라 튜토리얼 1 : terms_and_types
+```
 contents :
 
 scala> 1
@@ -160,6 +163,28 @@ res37: String = abc
 scala> "abc".take(4)
 res38: String = abc
 
+```
+
+### 스칼라 튜토리얼 2 : DEFINITIONS AND EVALUATION
+```
+scala> val radius = 10
+radius: Int = 10
+
+scala> var pi = 3.14159
+pi: Double = 3.14159
+
+scala> def square(x: Double) = x * x
+square: (x: Double)Double
+
+scala> def area(radius: Double): Double = 3.14159 * square(radius)
+area: (radius: Double)Double
+
+scala> def power(x: Double, y: Int) : Double = x + y
+power: (x: Double, y: Int)Double
+
+scala> loop
+java.lang.StackOverflowError
+at loop(<console>:23)
 ```
 
 ### 스칼라 스터디(한글)

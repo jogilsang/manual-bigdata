@@ -187,10 +187,28 @@ java.lang.StackOverflowError
 at loop(<console>:23)
 ```
 
+### 스칼라 튜토리얼 3 : Functional Loops
+```
+scala> def abs(x: Double):Double = if (x>=0) x else -x
+abs: (x: Double)Double
+
+scala> abs(5)
+res24: Double = 5.0
+
+scala> abs(0)
+res25: Double = 0.0
+
+scala> abs(-3)
+res26: Double = 3.0
+``
+
 ### 스칼라 스터디(한글)
 ```
 https://twitter.github.io/scala_school/ko/index.html
 ```
+
+
+
 
 ### 스칼라 에러
 Spark context available as 'sc' (master = local[*], app id = local-1560057371716).  

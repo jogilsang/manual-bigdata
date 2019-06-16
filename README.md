@@ -217,7 +217,41 @@ res25: Double = 0.0
 
 scala> abs(-3)
 res26: Double = 3.0
-``
+```
+
+### 스칼라 튜토리얼 4 : Lexical Scopes
+```
+scala> object Foo {
+     |   val x = 1
+     | }
+defined object Foo
+
+scala> object Bar {
+     |   val x = 2
+     | }
+defined object Bar
+
+scala> object Baz {
+     |   import Bar.x
+     |   val y = x + Foo.x
+     | }
+defined object Baz
+
+scala> Baz.y
+res33: Int = 3
+
+scala> Bar.x
+res34: Int = 2
+
+scala> Foo.x
+res35: Int = 1
+
+scala> {
+     | val x = f(3)
+     | x*x
+     | }
+
+```
 
 ### 스칼라 스터디(한글)
 ```

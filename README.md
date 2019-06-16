@@ -57,6 +57,23 @@
 // 출처 : https://jjangjjong.tistory.com/24      
 ```
 
+### 윈도우 스칼라 WordCount 과제
+1. 코드  
+```
+val text = sc.textFile("C:\\input\\2006.csv")
+val counts = text.flatMap(line => line.split(",")).map(word => (word, 1)).reduceByKey(_+_)
+counts.saveAsTextFile("C:\\output")
+System.out.println("Spark WordCount Completes!!")
+```
+2. 커맨드  
+C:\spark-2.4\bin에 WordCountScalaHDFSScript.scala 집어넣기(Path되있기때문)  
+```
+    Window PowerShell 실행 (C:\\spark-2.4\\bin 경로 이동)
+    .\\spark-shell -i WordCountScalaHDFSScript.scala 2>&1 | Tee-Object -file c:\\output_조길상_201103277.txt
+    txt파일 UTF-8 형식 변환
+    tree /F >> c:\\output_조길상_201103277.txt
+```
+
 ### 스칼라 Hello World!
 ```
 object HelloWorld {

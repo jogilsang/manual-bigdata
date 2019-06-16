@@ -253,6 +253,18 @@ scala> {
 
 ```
 
+### 스칼라 튜토리얼 5 : Tail Recursion
+```
+scala> def factorial(n:Int): Int =
+     | if(n==0) 1 else n*factorial(n-1)
+factorial: (n: Int)Int
+
+scala> factorial(4)
+res38: Int = 24
+
+@tailrec ???
+```
+
 ### 스칼라 스터디(한글)
 ```
 https://twitter.github.io/scala_school/ko/index.html

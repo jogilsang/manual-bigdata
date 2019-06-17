@@ -398,7 +398,33 @@ def sqrt(x: Double): Try[Double] =
   
 ```
 
+### 스칼라 튜토리얼 9 : Syntactic Conveniences
+```
+// 숫자랑 문자열을 넣어서 Tuple 형식으로 받기
+def getTuple(i:Int, s:String): (Int,String) = (i,s)
 
+scala> getTuple(930126,"gilsang")
+res17: (Int, String) = (930126,GILSANG)
+
+// 튜플 하나 만들기
+val is: (Int, String) = (930126, "gilsang")
+
+scala> is._1
+res22: Int = 930126
+
+scala> is._2
+res23: String = gilsang
+
+is match {
+  case (i, s) =>
+    (i,s)
+}
+
+is match {
+  case (i, s) =>
+    i
+}
+```
 
 
 ### 스칼라 스터디(한글)

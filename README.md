@@ -1,5 +1,23 @@
 # manual-bigdata
--환경변수 백업이 가능한가?
+
+### 스파크 역사
+```
+UC버클리의 RAD 연구실의 연구프로젝트로 2009년 시작
+2010년 3월 오픈소스화
+2013년 6월 아파치 
+```
+
+### 스파크 관련사이트
+```
+스파크의 사용자 목록페이지
+https://cwiki.apache.org/confluence/display/SPARK/Powered+By+Spark#app-switcher
+
+스파크 밋업
+http://www.meetup.com/spark-users
+
+스파크 서미트
+http://spark-summit.org
+```
 
 ### 윈도우 스파크 실습환경
 ```

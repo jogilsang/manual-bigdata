@@ -332,6 +332,75 @@ def sumInts(a: Int, b: Int) = sum(x => x, a, b)
 def sumCubes(a: Int, b: Int) = sum(x => x * x * x, a, b)
 ```
 
+### 스칼라 튜토리얼 8 : Standard Library
+```
+val fruit = List("apples", "oranges", "pears")
+val nums = List(1, 2, 3, 4)
+val empty = List()
+
+val nums = 1 :: 2 :: 3 :: 4 :: Nil
+val nums = Nil.::(4).::(3).::(2).::(1)
+
+val nums = List(1)
+val nums = List()
+
+nums match {
+  // 리스트가 1이나 2로 시작한다
+  case 1 :: 2 :: xs =>
+  println("리스트가 1이나 2로 시작한다")
+
+  // 리스트의 길이(Lenth)가 1이다.
+  case x :: Nil =>
+  println("리스트의 길이(Lenth)가 1이다.")
+
+  // 리스트의 길이(Lenth)가 1이다.
+  case List(x) =>
+  println("리스트의 길이(Lenth)가 1이다.") 
+
+  // 리스트가 비어있다. Nil
+  case List() =>
+  println("리스트가 비어있다. Nil") 
+
+}
+
+// 리스트를 받아서 match 시키는 함수의 예
+def insertionSort(xs: List[Int]): List[Int] = xs match {
+  case List() => List()
+  case y :: ys => insert(y, insertionSort(ys))
+}
+
+// 리스트에 있는 값들 하나씩 증가시키는 경우
+List(1, 2, 3).map(x => x + 1) == List(2, 3, 4)
+res7: Boolean = true
+
+// 리스트에서 2의 배수만 필터링하기
+List(1, 2, 3).filter(x => x % 2 == 0) == List(2)
+res8: Boolean = true
+
+// 리스트의 요소별로 새로운 리스트를 만들기???
+val xs =
+  List(1, 2, 3).flatMap { x =>
+    List(x, x+1, x+2)
+  }
+xs == List(1, 2, 3, 3, 4, 5, 4, 5, 6)
+
+
+// option을 줘서 할수있는거같은데, 잘모르겠다. 다른 예시가 필요할듯
+def sqrt(x: Double): Option[Double] =
+  if (x < 0) None else Some(…)
+
+// Success와 fail에 대해서
+def sqrt(x: Double): Try[Double] =
+  if (x < 0) Failure(new IllegalArgumentException("x must be positive"))
+  else Success(…)
+  
+  // Either ? left ? Right? 모르겠다
+  
+```
+
+
+
+
 ### 스칼라 스터디(한글)
 ```
 https://twitter.github.io/scala_school/ko/index.html

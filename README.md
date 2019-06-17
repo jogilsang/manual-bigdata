@@ -468,6 +468,17 @@ class User(x: String, y: Int, z:Int, gender:String) extends profile{
 }
 
 val user = new User("jogilsang", 930126,27,"man")
+
+
+// implement는 trait로 만들어서 with로 쓰나보네
+// overide는 위에처럼 사용하고...
+trait Planar {
+  def height: Int
+  def width: Int
+  def surface = height * width
+}
+
+class Square extends Shape with Planar with Movable …
 ```
 
 

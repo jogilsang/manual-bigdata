@@ -17,6 +17,9 @@ http://www.meetup.com/spark-users
 
 스파크 서미트
 http://spark-summit.org
+
+스파크 튜토리얼
+http://spark.apache.org/docs/latest/quick-start.html
 ```
 
 ### 윈도우 스파크 실습환경

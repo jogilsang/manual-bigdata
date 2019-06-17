@@ -43,6 +43,12 @@ http://spark-summit.org
     tree /F >> c:\\output_조길상_201103277.txt
 ```
 
+### 윈도우 스파크 설정
+```
+C:\spark-2.4\conf\log4j.properties.template
+log4j.rootCategory=WARN, console
+```
+
 
 ### 윈도우 스파크, 스칼라, 자바 세팅 window spark, scala,java 설치
 ```

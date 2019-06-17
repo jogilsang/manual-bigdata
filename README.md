@@ -426,6 +426,51 @@ is match {
 }
 ```
 
+### 스칼라 튜토리얼 10 : Object Oriented Programming
+```
+
+abstract class profile {
+ // OVERRIDING
+  def nationality : String = "kr"
+  
+  // IMPLEMENTATION
+  def name : String
+  def birth : Int
+  def age : Int
+  
+  def getName(): String
+  def getBirth() : Int 
+  def getAge() : Int
+}
+
+class User(x: String, y: Int, z:Int, gender:String) extends profile{
+
+   // REQUIRE (Check Parameter and Alarm Error)
+   require(y > 0, "birth must be positive") // java.lang.IllegalArgumentException
+   require(z > 0, "age must be positive")   // java.lang.IllegalArgumentException
+
+   // OVERRIDING
+  override def nationality : String = "en" 
+  override def toString = this.name + "/" + this.birth + "/" + this.age + "/" + this.sex
+  
+  // IMPLEMENTATION
+  def name : String = x // abstract class 를 구현하는경우, private 사용불가
+  def birth : Int = y // abstract class 를 구현하는경우, private 사용불가
+  def age : Int= z // abstract class 를 구현하는경우, private 사용불가
+  
+  def getName(): String = this.name
+  def getBirth() : Int = this.birth
+  def getAge() : Int = this.age
+  
+  // NONE
+  private def sex : String = gender
+  
+}
+
+val user = new User("jogilsang", 930126,27,"man")
+```
+
+
 
 ### 스칼라 스터디(한글)
 ```

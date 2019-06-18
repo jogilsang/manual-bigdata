@@ -536,3 +536,122 @@ Spark session available as 'spark'.
 spark.stop() 
 sc.stop()
 ```
+
+### Learning Spark O'REILLY
+```
+스파크란? 클러스터용 연산플랫폼이다
+맵리듀스 모델을 대화형 명령어 쿼리와 스트리밍 처리 등이 가능하도록 확장한것이다
+연산은 메모리에서 수행하기떄문에, 속도가 빠르다
+하둡 클러스터 위에서도 실행가능하며, 
+카산드라를 포함한 어떤 하둡데이터 소스에도 접근이가능하다.
+
+스파크는 여러개의 컴포넌트로 구성되어있다
+스파크SQL, 스파크 스트리밍(실시간), MLib(머신러닝), 그래프x(그래프처리)
+단독 스케줄러, 얀, 메소스
+
+RDD(탄력적인 분산 데이터 세트)
+
+스파크로 할 수 있는것?
+데이터 과학
+SQL, 통계, 예측 모델링(머신 러닝), 파이썬, 매틀랩, R프로그래밍
+
+데이터 어플리케이션 ???
+
+로컬모드는 즉 비분산모드
+메소스,얀,스파크 배포판에 포함된 단독스케줄러 등에서 동작이가능함
+
+---------------------------
+
+병렬연산을 수행하는 드라이버 프로그램 // spark shell
+SparkContext : 연산 클러스터에 대한 연결
+
+--------------------------
+스파크와 연동하는 방법은 스칼라의 경우 메이븐 의존성 필드에 spark-core 아티팩트를 써준다
+
+---------------------------------
+val lines = sc.textFile("C:\\spark-2.4\\README.md")
+lines.count()
+lines.first()
+
+val lines = sc.textFile("C:\\spark-2.4\\README.md")
+val counts = lines.filter(line => line.contains("Spark"))
+counts.count()
+counts.first()
+
+val inputRDD = sc.textFile("C:\\spark-2.4\\README.md")
+val countsSparkRDD = lines.filter(line => line.contains("Spark"))
+val countsApacheRDD = lines.filter(line => line.contains("Apache"))
+val unionRDD = countsSparkRDD.union(countsApacheRDD)
+scala> unionRDD.count
+res70: Long = 22
+scala> countsSparkRDD.count
+res71: Long = 20
+scala> countsApacheRDD.count
+res72: Long = 2
+
+
+println("Here are 10 examples: ")
+countsSparkRDD.take(10).foreach(println)
+
+scala> countsSparkRDD.take(3).foreach(println)
+# Apache Spark
+Spark is a fast and general cluster computing system for Big Data. It provides
+rich set of higher-level tools including Spark SQL for SQL and DataFrames,
+
+
+
+val input = sc.textFile("C:\\spark-2.4\\README.md")
+// 단어별로 나눈다
+ val words = input.flatMap(line => line.split(" "))
+// 단어, 숫자 쌍으로 변환하고 개수를 센다
+val counts = words.map(word => (word,1)).reduceByKey{case (x,y) => x+y}
+// 단어 개수르 다시 텍스트 파일로 저장한다
+counts.saveAsTextFile("C:\\output")
+
+
+
+-----------------------------------------------
+
+RDD(탄력적인 분산 데이터 세트)
+: 변경 불가능한 객체모음, 여러개의 파티션으로 나눠질수있음
+RDD는 두가지 연산타입을 제공해주는대
+트랜스포메이션과 액션이다
+트랜스포메이션은 기존 RDD로부터 새로운 RDD를 생성해낸다. 예를들어 Python단어를 포함한 문자열만을 갖는 RDD 만드는 필터
+액션은 RDD를 기초로 결과 값을 계산하여, 그 값을 되돌려주거나 저장
+예를들어 first()함수로 첫번쨰줄이 shell에 표현됨
+
+lazy evaluation(여유로운 방식)
+
+RDD의 동작방식?
+RDD를 만들게되고, 트랜스포메이션 등으로 새로운 RDD를 정의한다
+RDD를 재사용한다면 persist()를 요청한다
+연산수행을 위해 action을 시작한다.
+
+-----------------------------------------------------------------------------------
+키/값 페어로 작업
+ETL : 기업용 시스템 간에 대량 데이터를 추출해 다른 시스템에 적재하는 작업
+키/값 쌍을 가지고 있는 RDD에 대해 특수한 연산 제공
+페어 RDD
+
+첫번째 단어를 키로 사용한 페어 RDD 생성
+val pairs = input.map(x => (x.split(" ")(0), x))
+
+페어RDD의 트랜스포메이션의 다양한 예시 reduceByKey(func)
+
+// 워드카운트
+val input = sc.textFile("C:\\spark-2.4\\README.md")
+val words = input.flatMap(x => x.split(" "))
+val result = words.map(x => (x,1)).reduceByKey((x,y) => x+y)
+
+// 키별로 평균구하기
+val result2 = result.mapValues(x => (x,1)).reduceByKey((x,y) => (x._1 + y._1, x._2 + y._2))
+
+// 스칼라 병렬화 직접 지정을 사용한 reduceByKey
+val data = Seq(("a",3), ("b",4), ("a",1))
+sc.parallelize(data).reducyByKey((x,y) => x+y)
+sc.parallelize(data).reducyByKey((x,y) => x+y, 10) // 병렬화 수준 지정
+
+storeAddress = {
+  (Store("Ritual"), "1026 Valencia St")
+}
+```

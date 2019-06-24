@@ -519,6 +519,55 @@ trait Planar {
 class Square extends Shape with Planar with Movable …
 ```
 
+### 스칼라 튜토리얼 11 : Imperative Programming
+```
+
+class BankAccount {
+  private var balance = 0
+  def deposit(amount: Int): Int = {
+    if (amount > 0) balance = balance + amount
+    balance
+  }
+  def withdraw(amount: Int): Int =
+    if (0 < amount && amount <= balance) {
+      balance = balance - amount
+      balance
+    } else throw new Error("insufficient funds")
+}
+
+scala> val account = new BankAccount
+account: BankAccount = BankAccount@7cf166db
+
+scala> account.deposit(50)
+res0: Int = 50
+
+scala> account deposit 50
+res1: Int = 100
+
+scala> account withdraw 20
+res2: Int = 80
+
+scala> account withdraw 20
+res3: Int = 60
+
+scala> val x = new BankAccount
+x: BankAccount = BankAccount@302692b1
+
+scala> val c = x
+c: BankAccount = BankAccount@302692b1
+
+
+scala> for (i <- 1 until 3) { System.out.print(i + " ") }
+1 2
+scala> for (i <- 1 until 3; j <- "abc") println(s"$i $j")
+1 a
+1 b
+1 c
+2 a
+2 b
+2 c
+```
+
 
 
 ### 스칼라 스터디(한글)

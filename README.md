@@ -567,7 +567,35 @@ scala> for (i <- 1 until 3; j <- "abc") println(s"$i $j")
 2 b
 2 c
 ```
+### 스칼라 튜토리얼 12 : Classes Vs Case Classes
+```
 
+
+val c3 = Note("C", "Quarter", 3)
+scala> val cThree = Note("C", "Quarter", 3)
+
+scala> c3 == cThree
+res12: Boolean = true
+
+scala> val aliceAccount = new BankAccount
+aliceAccount: BankAccount = BankAccount@7ccf6785
+
+scala> val bobAccount = new BankAccount
+bobAccount: BankAccount = BankAccount@4430d9be
+
+scala> aliceAccount == bobAccount
+res13: Boolean = false
+
+c3 match {
+  case Note(name, duration, octave) => s"The duration of c3 is $duration"
+}
+
+scala> c3 match {
+     |   case Note(name, duration, octave) => s"The duration of c3 is $duration"
+     | }
+res15: String = The duration of c3 is Quarter
+
+```
 
 
 ### 스칼라 스터디(한글)
